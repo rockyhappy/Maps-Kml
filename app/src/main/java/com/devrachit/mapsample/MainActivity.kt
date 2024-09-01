@@ -11,6 +11,7 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.maps.android.data.kml.KmlLayer
+import java.io.IOException
 
 class MainActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,8 +25,23 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
     }
 
     override fun onMapReady(googleMap: GoogleMap) {
-        val kmlLayer = KmlLayer(googleMap, R.raw.mmi, this)
-        kmlLayer.addLayerToMap()
+//        val kmlLayer = KmlLayer(googleMap, R.raw.sample3, this)
+//        kmlLayer.addLayerToMap()
+        try {
+
+            val kmlLayer = KmlLayer(googleMap, R.raw.sample3, this)
+
+            kmlLayer.addLayerToMap()
+
+            val cameraUpdate = CameraUpdateFactory.newLatLngZoom(LatLng(37.7749, -122.4194), 10f)
+            googleMap.moveCamera(cameraUpdate)
+
+        } catch (e: IOException) {
+            e.printStackTrace()
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+
 
     }
 }
