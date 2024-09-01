@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>KmlFile</name>
+    <Style id="mmi_office">
+      <IconStyle>
+        <Icon>
+          <href>https://www.mapmyindia.com/api/advanced-maps/doc/sample/3.png
+          </href>
+        </Icon>
+      </IconStyle>
+      <LineStyle>
+      <color>A600CC33</color>
+      <width>10</width>
+    </LineStyle>
+    <PolyStyle>
+      <color>1A0000FF</color>
+      <fill>1</fill>
+      <outline>1</outline>
+    </PolyStyle>
+    </Style>
+    <Style id="mmi_area">
+    <LineStyle>
+      <color>A600CC33</color>
+      <width>3</width>
+    </LineStyle>
+    <PolyStyle>
+      <color>A600CC33</color>
+      <fill>1</fill>
+      <outline>1</outline>
+    </PolyStyle>
+   </Style>
+    <Placemark>
+      <name>MapmyIndia old Office</name>
+      <styleUrl>#mmi_office</styleUrl>
+      <ExtendedData>
+      </ExtendedData>
+      <Point>
+        <coordinates>77.268038,28.549652,0</coordinates>
+      </Point>
+    </Placemark>
+  
+    <Placemark>
+      <name>MapmyIndia New Office</name>
+      <styleUrl>#mmi_office</styleUrl>
+         <Point>
+        <coordinates>77.268952,28.5510446,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+    <name>Direction</name>
+    <description><![CDATA[Direction]]></description>
+    <styleUrl>#mmi_office</styleUrl>
+    <LineString>
+      <coordinates>
+            77.268953,28.551042
+            77.268649,28.551005
+            77.268392,28.550986
+            77.268231,28.550967
+            77.268177,28.550967
+            77.268016,28.550958
+            77.267587,28.55092
+            77.267651,28.550722
+            77.267823,28.55042
+            77.267802,28.550128
+            77.267995,28.549751
+            77.268039,28.549652
+          </coordinates>
+    </LineString>
+  </Placemark>
+   <Placemark>
+    <name>MapmyIndia Head Office</name>
+    <description><![CDATA[]]></description>
+    <styleUrl>#mmi_area</styleUrl>
+    <Polygon>
+      <outerBoundaryIs>
+        <LinearRing>
+          <tessellate>1</tessellate>
+          <coordinates>
+           77.26878225803375,28.550868798522835
+           77.26899683475493,28.550868798522835
+           77.26903975009918,28.550383454405356
+           77.26883590221404,28.550388166494926
+            </coordinates>
+        </LinearRing>
+      </outerBoundaryIs>
+    </Polygon>
+  </Placemark>
+  </Document>
+</kml>
+
